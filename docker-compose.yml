@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: pokedex-front
+    container_name: pokedex-front-app
+    restart: unless-stopped
+    working_dir: /usr/share/nginx/html/browser/
+    ports:
+      - 8001:80
