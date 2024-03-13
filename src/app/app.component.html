@@ -65,11 +65,55 @@
               <b>Peso:</b> {{ pokemon.peso }} Kg
             </div>
           </div>
+          <div class="card-footer">
+            <div class="row right">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pokemonInfo" (click)="selectPokemon(pokemon)">
+                Info
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       }
     </div>
   </div>
 </main>
+<div #pokemonInfo class="modal left fade" id="pokemonInfo" tabindex="-1" aria-labelledby="pokemonInfoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="pokemonInfoLabel"><b>{{nomePokemonInfo}}</b> #{{numeroPokemonInfo}}</h5>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <img cImg fluid src="{{imagemPokemonInfo}}" />
+            </div>
+            <div class="row">
+              <h3>Tipos</h3>
+              <div class="col-12 text-center">
+                <b>Primário:</b> <p class="{{tipoPrimarioPokemonInfo}}">{{tipoPrimarioPokemonInfo}}</p>
+                <b>Secundário:</b> <p class="{{tipoSecundarioPokemonInfo}}">{{tipoSecundarioPokemonInfo}}</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <h3>Informação</h3>
+              <b>Altura:</b> {{alturaPokemonInfo}} m<br>
+              <b>Peso:</b> {{pesoPokemonInfo}} Kg
+              <h3>Status</h3>
+              <b>HP:</b> {{hpPokemonInfo}}<br>
+              <b>Ataque:</b> {{ataquePokemonInfo}}<br>
+              <b>Defesa:</b> {{defesaPokemonInfo}}<br>
+              <b>Ataque Especial:</b> {{ataqueEspecialPokemonInfo}}<br>
+              <b>Defesa Especial:</b> {{defesaEspecialPokemonInfo}}<br>
+              <b>Velocidade:</b> {{velocidadePokemonInfo}}
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="closeModal" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+      </div>
+  </div>
+</div>
 
-  <router-outlet />
+
+<router-outlet />

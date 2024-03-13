@@ -70,6 +70,10 @@ main {
     width: 14rem;
 }
 
+#closeModal {
+    display: hide;
+}
+
 @media screen and (max-width: 650px) {
     .content {
         flex-direction: column;
@@ -88,4 +92,129 @@ main {
     .pokemonInfo {
         width: 100%;
     }
+}
+
+
+@media screen and (min-width: 438px) {
+    .modal.left .modal-dialog {
+        position:fixed;
+        right: 0;
+        margin: auto;
+        width: 50%;
+        height: 100%;
+    }
+
+    .modal.left .modal-content {
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        border-radius: 0;
+        border: none;
+    }
+
+    .modal-header {
+        border-bottom-color: #eeeeee;
+        background-color: #fafafa;
+    }
+
+    #closeModal {
+        display: none;
+    }
+}
+
+.normal {
+    color: #ffffff;
+    background-color: #a8a878;
+}
+
+.fire {
+    color: #ffffff;
+    background-color: #f08030;
+}
+
+.water {
+    color: #ffffff;
+    background-color: #6890f0;
+}
+
+.electric {
+    color: #ffffff;
+    background-color: #f8d030;
+}
+
+.grass {
+    color: #ffffff;
+    background-color: #78c850;
+}
+
+.ice {
+    color: #ffffff;
+    background-color: #98d8d8;
+}
+
+.fighting {
+    color: #ffffff;
+    background-color: #c03028;
+}
+
+.poison {
+    color: #ffffff;
+    background-color: #a040a0;
+}
+
+.ground {
+    color: #ffffff;
+    background-color: #e0c068;
+}
+
+.flying {
+    color: #ffffff;
+    background-color: #a890f0;
+}
+
+.psychic {
+    color: #ffffff;
+    background-color: #f85888;
+}
+
+.bug {
+    color: #ffffff;
+    background-color: #a8b820;
+}
+
+.rock {
+    color: #ffffff;
+    background-color: #b8a038;
+}
+
+.ghost {
+    color: #ffffff;
+    background-color: #705898;
+}
+
+.dragon {
+    color: #ffffff;
+    background-color: #7038f8;
+}
+
+.dark {
+    color: #ffffff;
+    background-color: #705848;
+}
+
+.steel {
+    color: #ffffff;
+    background-color: #b8b8d0;
+}
+
+.fairy {
+    color: #ffffff;
+    background-color: #f0b6bc;
+}
+
+.stellar {
+    color: #ffffff;
+    background-color: #35ace7;
 }

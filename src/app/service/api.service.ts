@@ -6,7 +6,7 @@ import { Pokedex } from '../models/pokedex';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = "http://localhost:8080";
+  private apiUrl = "http://localhost:8000";
 
   constructor(private http : HttpClient) { }
 

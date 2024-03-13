@@ -19,6 +19,20 @@ export class AppComponent implements OnInit {
   anterior = '';
   pokemonList: Pokemon[] = [];
 
+  nomePokemonInfo = '';
+  tipoPrimarioPokemonInfo = '';
+  tipoSecundarioPokemonInfo = '';
+  numeroPokemonInfo = 0;
+  imagemPokemonInfo = '';
+  alturaPokemonInfo = '';
+  pesoPokemonInfo = '';
+  hpPokemonInfo = 0;
+  ataquePokemonInfo = 0;
+  defesaPokemonInfo = 0;
+  ataqueEspecialPokemonInfo = 0;
+  defesaEspecialPokemonInfo = 0;
+  velocidadePokemonInfo = 0;
+
   ngOnInit(): void {
     this.apiService.getPokedex().subscribe((data: Pokedex) => {
       this.total = data.total;
@@ -67,5 +81,21 @@ export class AppComponent implements OnInit {
 
   mudarNome(event: Event) {
     this.nomePokemon = (event.target as HTMLInputElement).value;
+  }
+
+  selectPokemon(pokemon: Pokemon) {
+    this.nomePokemonInfo = pokemon.nome;
+    this.tipoPrimarioPokemonInfo = pokemon.tipos[0].nome;
+    this.tipoSecundarioPokemonInfo = ((pokemon.tipos.length > 1) ? pokemon.tipos[1].nome : '');
+    this.numeroPokemonInfo = pokemon.numero;
+    this.imagemPokemonInfo = pokemon.imagem;
+    this.alturaPokemonInfo = pokemon.altura;
+    this.pesoPokemonInfo = pokemon.peso;
+    this.hpPokemonInfo = pokemon.status[0].valor;
+    this.ataquePokemonInfo = pokemon.status[1].valor;
+    this.defesaPokemonInfo = pokemon.status[2].valor;
+    this.ataqueEspecialPokemonInfo = pokemon.status[3].valor;
+    this.defesaEspecialPokemonInfo = pokemon.status[4].valor;
+    this.velocidadePokemonInfo = pokemon.status[5].valor;
   }
 }
